@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Linq;
+using System.Numerics;
 using System.Text;
 using System.Threading.Tasks;
 using WpfCardGame.Model;
@@ -44,6 +45,9 @@ namespace WpfCardGame.ViewModel {
 
         public void NewGameCommand() 
         {
+            //Oprette nye kort med tilfældige symbole
+            //Blande kort positions
+            //Nulstille counters
 
 
         }
