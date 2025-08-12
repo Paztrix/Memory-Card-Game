@@ -5,23 +5,18 @@ using System.Text;
 using System.Threading.Tasks;
 
 namespace WpfCardGame.Model {
-    public class Card {
-        public int Id { get; set; }
-        A1 + B1
-        A2 + B2
-        A3 + B3
-        A4 + B4
-        A5 + B5
-        A6 + B6
-        A7 + B7
-        A8 + B8 
+    public class Card 
+    {
+        public string Id { get; set; } //skal det kun være get
+        public int PairKey { get; set; } //skal det kun være get
 
-
-        public string PairKey { get; set; }
-        1, 2, 3, 4
-
-
-
+        public Card(string id, string pairKey)
+        {
+            Id = id;
+            PairKey = pairKey;
+        }
+       
+                   
         public bool IsFlipped { get; set; }
         Kan ikke trykkes på når IsFlipped = True;
         Kan trykkes på når IsFlipped = False

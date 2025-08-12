@@ -20,9 +20,51 @@ namespace WpfCardGame.ViewModel {
 
 
 // Rebecca laver dem her
-        public void FlipCardCommand() {
+        public void FlipCardCommand(Card selectedCard) {
+           
+            selectedCard.IsFlipped = true;
 
-            IsFlipped = True
+            if (FirstSelectedCard == null)
+            {
+                FirstSelectedCard = selectedCard;
+            }
+            else
+            {
+                SecondSelectedCard = selectedCard;
+                MoveCount++;
+
+                if (FirstSelectedCard.PairKey == SecondSelectedCard.PairKey)
+                {
+                    FirstSelectedCard.IsMatched = true;
+                    SecondSelectedCard.IsMatched = true;
+                    ClearSelection();
+
+                }
+                else
+                {
+                    Task.Delay(1000).ContinueWith(_ =>
+                    {
+                        FirstSelectedCard.IsFlipped = false;
+                        SecondSelectedCard.IsFlipped = false;
+                        ClearSelection();
+                    });
+                }
+
+            }
+        }
+
+        private void ClearSelection()
+        {
+            FirstSelectedCard = null;
+            SecondSelectedCard = null;
+        }
+
+
+                    
+                
+
+
+                    IsFlipped = True
                 Kan ikke trykkes på når True
 
                 IsFlipped = false
