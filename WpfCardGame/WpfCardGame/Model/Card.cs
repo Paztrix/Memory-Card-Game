@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace WpfCardGame.Model {
     public class Card {
-        public int Id { get; set; }
+        public string Id { get; set; }
         //A1 + B1
         //A2 + B2
         //A3 + B3
@@ -20,11 +20,7 @@ namespace WpfCardGame.Model {
         public string PairKey
         {
             get;
-            set
-            {
-                if (value != "0") { throw new Exception(); }
-                else PairKey = value;
-            }
+            set;
         }
 
         // svarer til symbol i opgaven
@@ -47,7 +43,7 @@ namespace WpfCardGame.Model {
         //    Deaktivér de tilhørende ID's
         //    Tillæg point til spilleren - Samt registrér hvilket PairKey der blev fundet.
         
-        public Card (int Id, string PairKey)
+        public Card (string Id, string PairKey)
         {
             this.Id = Id;
             this.PairKey = PairKey;
