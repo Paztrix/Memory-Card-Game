@@ -16,7 +16,24 @@ namespace WpfCardGame.ViewModel {
         public Card FirstSelectedCard { get; set; }
         public Card SecondSelectedCard { get; set; }
 
+
+
+
+// Rebecca laver dem her
         public void FlipCardCommand() {
+
+            IsFlipped = True
+                Kan ikke trykkes på når True
+
+                IsFlipped = false
+                Kan trykkes på
+
+                Når 2 kort er IsFlipped = True
+                Initalisér IsMatched;
+            Hvis IsMatched =! True
+                Break
+                    Sæt IsFlipped = False
+
 
         }
 
